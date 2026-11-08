@@ -6,10 +6,10 @@ metadata:
   name: kube-prometheus-stack
   namespace: monitoring
   annotations:
-    platform.twallac10.io/chart-version: "93.0.0"
+    platform.twallac10.io/chart-version: "92.21.2"
 spec:
   ref:
-    digest: "sha256:b0ec2f37f2f280bd7745ecc561a8ce7ccfbe1ea9d3e961c9fff636f1267149af" # set by `task charts:seed` / mirror.yaml
+    digest: "sha256:7034757a8a833fce955d39a0104f4e86b69c5026d2725ecea364f5d0cc9e42a9" # set by `task charts:seed` / mirror.yaml
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -44,10 +44,10 @@ spec:
         general: false
     prometheusOperator:
       image:
-        tag: v0.95.1
+        tag: v0.94.2
       prometheusConfigReloader:
         image:
-          tag: v0.95.1
+          tag: v0.94.2
       admissionWebhooks:
         patch:
           image:
